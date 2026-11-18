@@ -102,9 +102,7 @@ public class Board {
                     return false;
         return true;
     }
-        // Retorna true se existe alguma linha/coluna/diagonal que ainda pode ser
-    // completada pelo jogador 'value' (-1 = X, 1 = O), ou seja, que nao contem
-    // nenhuma marca do adversario.
+   
     public boolean canWin(int value){
         int[][][] lines = {
             {{0,0},{0,1},{0,2}}, {{1,0},{1,1},{1,2}}, {{2,0},{2,1},{2,2}},
@@ -125,8 +123,6 @@ public class Board {
         return false;
     }
 
-    // Empate (Velha): ninguem venceu e nenhum jogador consegue mais vencer,
-    // mesmo que ainda existam casas vazias. Cobre tambem o tabuleiro cheio.
     public boolean isDraw(){
         if(checkLines() != 0 || checkColumns() != 0 || checkDiagonals() != 0)
             return false;

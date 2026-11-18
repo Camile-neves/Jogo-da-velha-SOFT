@@ -32,10 +32,10 @@ public class Human extends Player{
                 System.out.print("Line: ");
                 attempt[0] = input.nextInt();
                 
-                if( attempt[0] > 3 ||attempt[0] < 1)
+                if( attempt[0] > 3 ||attempt[0] < 0)
                     System.out.println("Invalid line. It's 1, 2 or 3");
                 
-            }while( attempt[0] > 3 ||attempt[0] < 1);
+            }while( attempt[0] > 3 ||attempt[0] < 0);
             
             do{
                 System.out.print("Column: ");
@@ -51,6 +51,6 @@ public class Human extends Player{
             
             if(!checkTry(attempt, board))
                 System.out.println("Placed already marked. Try other.");
-        }while( !checkTry(attempt, board) );
+        }while(false);
     }
 }
